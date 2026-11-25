@@ -394,3 +394,21 @@ input[type="date"] {
   padding:0 14px !important;
   box-sizing:border-box !important;
 }
+
+/* Final Header, Menu & Larger Logo Override */
+.brand-logo{height:66px !important;width:auto;object-fit:contain;display:block;flex:none}
+.footer .brand-logo{height:78px !important;width:auto;object-fit:contain;display:block;flex:none}
+@media(max-width:760px){.brand-logo{height:54px !important}}
+.site-header{background:rgba(244,246,248,.94) !important}
+@media(max-width:1050px){
+  .site-header .nav{top:84px !important;background:var(--paper) !important;color:var(--ink) !important}
+  .site-header .nav a:not(.button){color:var(--ink) !important}
+  .site-header .nav a[aria-current=page]{color:var(--accent) !important}
+}
+@media(max-width:760px){
+  .site-header .nav{top:70px !important}
+}
+
+.site-header{background-image:none !important}
+.dark-band,.footer,.scoreboard,.ticker{background-image:radial-gradient(rgba(255,255,255,.11) 1.2px,transparent 1.2px) !important;background-size:22px 22px !important}
+.faq-section,.gallery-section,.game-callout,.market-list-cta,.admin-sidebar,.feature-card:nth-child(2),.feature-card:nth-child(3),.amenities article,.game-card{background-image:radial-gradient(color-mix(in srgb,var(--ink) 10%,transparent) 1.2px,transparent 1.2px) !important;background-size:20px 20px !important}
