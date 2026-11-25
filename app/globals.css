@@ -238,7 +238,7 @@ h1,h2,h3,.brand{font-family:"Chakra Petch", Arial, sans-serif}
 
 /* Google rating summary, dotted non-white sections & contact map */
 .google-rating-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.google-score{font-size:2.2rem;font-weight:700;line-height:1;color:#fff;letter-spacing:-.04em}
+.google-score{font-size:1.8rem;font-weight:700;line-height:1;color:#fff;letter-spacing:-.04em}
 .google-count{font-size:.85rem;color:rgba(255,255,255,.65)}
 .dark-band,.footer,.scoreboard{background-image:radial-gradient(rgba(255,255,255,.085) 1px,transparent 1px);background-size:22px 22px}
 .faq-section,.gallery-section,.game-callout,.market-list-cta,.admin-sidebar{background-image:radial-gradient(color-mix(in srgb,var(--ink) 8%,transparent) 1px,transparent 1px);background-size:20px 20px}
@@ -295,25 +295,39 @@ input, select, textarea { font-size: max(16px, 1em) !important; }
 @media (max-width: 760px) { input, select, textarea { font-size: 16px !important; } }
 
 /* =============================================
-   HEADER - scrolls with page (not fixed)
+   FIXED HEADER - stays pinned at top on scroll
    ============================================= */
 .site-header {
-  position: relative;
-  z-index: 20;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 100 !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
-
-/* Mobile nav dropdown */
+body > main {
+  padding-top: 84px;
+}
 @media (max-width: 1050px) {
-  .nav {
-    position: absolute !important;
-    top: 100% !important;
+  .site-header .nav {
+    position: fixed !important;
+    top: 84px !important;
     left: 0 !important;
     right: 0 !important;
     width: 100% !important;
   }
 }
+@media (max-width: 760px) {
+  body > main {
+    padding-top: 70px;
+  }
+  .site-header .nav {
+    top: 70px !important;
+  }
+}
 
-/* Mobile viewport containment + date input & search box fix */
 html, body { overflow-x: clip; max-width: 100%; }
 
 
@@ -367,3 +381,11 @@ html, body { overflow-x: clip; max-width: 100%; }
 .site-header{background-image:none !important}
 .dark-band,.footer,.scoreboard,.ticker{background-image:radial-gradient(rgba(255,255,255,.11) 1.2px,transparent 1.2px) !important;background-size:22px 22px !important}
 .faq-section,.gallery-section,.game-callout,.market-list-cta,.admin-sidebar,.feature-card:nth-child(2),.feature-card:nth-child(3),.amenities article,.game-card{background-image:radial-gradient(color-mix(in srgb,var(--ink) 10%,transparent) 1.2px,transparent 1.2px) !important;background-size:20px 20px !important}
+
+
+@media(max-width:760px){
+  .google-score{font-size:1.4rem !important;margin-top:12px !important;display:block !important}
+  .google-rating-row{flex-direction:column;align-items:flex-start;gap:4px;margin-top:6px}
+  .google-badge{align-items:flex-start;flex-direction:column;gap:8px}
+}
+
