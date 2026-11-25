@@ -382,10 +382,13 @@ html, body { overflow-x: clip; max-width: 100%; }
 .dark-band,.footer,.scoreboard,.ticker{background-image:radial-gradient(rgba(255,255,255,.11) 1.2px,transparent 1.2px) !important;background-size:22px 22px !important}
 .faq-section,.gallery-section,.game-callout,.market-list-cta,.admin-sidebar,.feature-card:nth-child(2),.feature-card:nth-child(3),.amenities article,.game-card{background-image:radial-gradient(color-mix(in srgb,var(--ink) 10%,transparent) 1.2px,transparent 1.2px) !important;background-size:20px 20px !important}
 
-
+/* Google review badge alignment: 4.9 + stars aligned with Google G, (reviews) below */
+.google-badge{display:flex !important;flex-direction:row !important;align-items:center !important;gap:14px !important}
+.google-rating-row{display:flex !important;flex-direction:row !important;align-items:center !important;flex-wrap:wrap !important;gap:4px 10px !important;margin-top:0 !important}
+.google-score{font-size:1.65rem !important;font-weight:700;line-height:1;color:#fff;letter-spacing:-.04em;margin-top:0 !important;display:inline-block !important}
+.google-rating-row .stars{display:inline-flex;align-items:center;white-space:nowrap}
+.google-count{flex-basis:100% !important;font-size:.85rem;color:rgba(255,255,255,.65);line-height:1.2}
 @media(max-width:760px){
-  .google-score{font-size:1.4rem !important;margin-top:12px !important;display:block !important}
-  .google-rating-row{flex-direction:column;align-items:flex-start;gap:4px;margin-top:6px}
-  .google-badge{align-items:flex-start;flex-direction:column;gap:8px}
+  .google-badge{flex-direction:row !important;align-items:center !important;gap:12px !important}
+  .google-score{font-size:1.45rem !important}
 }
-
